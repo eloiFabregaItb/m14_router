@@ -8,6 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/products">Productes</RouterLink>
       </nav>
     </div>
   </header>
@@ -18,8 +19,6 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
 
   header{
-    position: fixed;
-    top: 0;
     background-color: #333;
     color: white;
     width: 100%;
@@ -37,11 +36,24 @@ import { RouterLink, RouterView } from 'vue-router'
   header nav a{
     color: white;
     text-decoration: none;
+    padding: 1rem;
   }
+  
+  header nav a:hover{
+    color: #333;
+    background-color: #bbb;
+  }
+  
 
   header nav a.router-link-active{
     color: orange;
   }
+
+  header nav a.router-link-active:hover{
+    color: white;
+    background-color: orange;
+  }
+
 
 
 
