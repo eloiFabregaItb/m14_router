@@ -1,13 +1,13 @@
 <script setup lang="ts">
+  import products from "../assets/products.json"
+  import ProductList from "../components/ProductList.vue"
 
-const products = [1,2,3,4,5]
+
+  console.log("PRODUCTS",products)
+
 </script>
 
 <template>
   <h1>PRODUCTS</h1>
-  <ul>
-    <li v-for="item in products">
-      <RouterLink to="{{ item }}">producte {{ item}}</RouterLink>
-    </li>  
-  </ul>
+  <ProductList :items="products" />
 </template>
